@@ -4,8 +4,7 @@ const fs = require('fs').promises;
 
 axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
     .then((response) => {
-
-        // sacar los datones que es importante
+        //extrae los datos mas importantes de la API
         var data = response.data.bpi
         var resultado = [
                     `${data.USD.code} `+` $ ${data.USD.rate}`,
